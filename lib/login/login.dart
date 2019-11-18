@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 // import 'dart:io';//自带的请求需要用到的包
-import 'package:dio/dio.dart'; //第三方dio请求要用到的包
+import 'package:dio/dio.dart'; //第三方dio接口请求要用到的包
 
 class LoginPage extends StatelessWidget {
   @override
@@ -37,7 +37,7 @@ class _FormregistState extends State<Formregist> {
   //定义一个获取验证码的方法
   _getSmsCode() async {
     //这样实现单次点击
-    if (_seconds == 0) {
+    if (_seconds == 0 && username!='') {
       // 这里执行:
       //一.倒计时方法;
       _startTimer();
@@ -69,7 +69,6 @@ class _FormregistState extends State<Formregist> {
           return print(e);
         }
       }
-
       getHttp();
 
     }
@@ -162,7 +161,7 @@ class _FormregistState extends State<Formregist> {
                           hintStyle:
                               TextStyle(color: Colors.black38, fontSize: 14.0)),
                               onChanged:(value){
-                                // print(value);
+                                print(value);//输入框的值
                                 setState((){
                                   smsCode=value;
                                 });
