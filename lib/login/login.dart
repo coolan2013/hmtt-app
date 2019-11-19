@@ -4,7 +4,7 @@ import 'dart:async';
 // import 'package:dio/dio.dart'; //第三方dio接口请求要用到的包,已移除到pub.dart里
 import 'package:heima_app/moudle/pub.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:heima_app/home/home.dart';
+// import 'package:heima_app/home/home.dart';
 
 class LoginPage extends StatelessWidget {
   @override
